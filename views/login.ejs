@@ -1,30 +1,108 @@
-<!--HTML-Grundgerüst über die Eingabe von html und dann html:5 auswählen-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <!--Der Titel steht im Browsertab-->
     <title>Borken-Bank - Login</title>
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00509E; /* Dunkelblauer Hintergrund */
+            color: white; /* Weißer Text */
+            font-size: 1.8rem;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00509E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003f7d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00509E;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <!--Der haeder soll die Seite strukturieren und bekommt entsprechende Styles zugwiesen-->
     <header>
-        <!--Überschrift der Seite-->
-        <h1>Herzlich Willkommen bei der Borken-Bank</h1>
+        <h1>Herzlich Willkommen bei der Borken-Bank</h1> <!-- Textfarbe in Weiß -->
     </header>
-    <!--Formularfelder (Textboxen, Button etc.) müssen in form-Tags eingebettet werden-->
+
     <form>
-        <!--Die Labels beschreiben die Textboxen. br bricht die Zeile um.-->
-        <label>Benutzername</label><br>
-        <input><br>
-        <label>Kennwort</label><br>
-        <input type="password"><br>
-        <button>Einloggen</button>
+        <label for="username">Benutzername</label>
+        <input type="text" id="username" name="username" placeholder="Benutzername eingeben" required>
+        
+        <label for="password">Kennwort</label>
+        <input type="password" id="password" name="password" placeholder="Kennwort eingeben" required>
+        
+        <button type="submit">Einloggen</button>
     </form>
+
     <footer>
-        &#169; 2024 Borken-Bank AG
+        <p>&#169; 2024 Borken-Bank AG</p>
+        <p><a href="#">Passwort vergessen?</a> | <a href="#">Konto erstellen</a></p>
     </footer>
 </body>
 </html>
